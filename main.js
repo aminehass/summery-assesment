@@ -59,7 +59,12 @@ function reduce(array, f, acc) {
 //wordLengths("hello its me") // [5,3,2]
 
 function wordLengths(str) {
-    // TODO: your code here 
+     var array = [];
+     var arr = str.split(' ');
+     for(var i = 0; i < arr.length; i++) {
+       array.push(arr[i].length);
+     }
+     return array;
 }
 
 //=============================================================================
@@ -72,7 +77,14 @@ function wordLengths(str) {
 // countOccurrences("hello, world!", "l"); // 3
 
 function countOccurrences(string, character) {
-    // your code is here
+     var result = 0;
+     var arr1 = string.split('');
+       for(var i = 0; i < arr1.length; i++) {
+         if(arr1[i] === character) {
+           result++;
+         }
+       }
+     return result;  
 }
 
 //=============================================================================
@@ -83,10 +95,16 @@ function countOccurrences(string, character) {
 //solve it using the most appropriate helper functions(reduce,each,map,filter).
 // wordsLongerThanThree("Hello Mad World") //["Hello", "World"]
 
-function wordsLongerThanThree(str) {
-    // TODO: your code here 
-}
-
+function wordsLongerThanThree(str1) {
+     var array1 = [];
+     var arr2 = str1.split(' ');
+     for(var i = 0; i < arr2.length; i++) {
+       if(arr2[i].length > 3) {
+            array1.push(arr2[i]);
+       } 
+    }
+    return array1;
+  }
 //=============================================================================
 /*                                  Q4                                        */
 //=============================================================================
@@ -98,8 +116,14 @@ function wordsLongerThanThree(str) {
 //repeatString('dog', 2); // => 'dog' + 'dog' => 'dogdog' 
 //repeatString('dog', 3); // => 'dog' + 'dog' + 'dog' => 'dogdogdog'
 
-function repeatString(str, count) { 
- // TODO: your code here 
+function repeatString(str2, count) {
+  var result1 = ''; 
+   if(count === 0) {
+     return '';
+   }
+   while(count )
+   result1 = str2 + repeatString(str2, (count - 1));
+   return result1; 
 } 
  
 
@@ -216,12 +240,20 @@ d- Decrement the number of "unread" books
 //================================================================================
 // Theoretical questions.
 // 1- In your own words,Why do we use Closures ?
+    
+    /* it mean that closure function it is able to access to the scope of high order function even after this parent function is closed*/
 
 // 2- In OOP, what does "this" refer to ?
 
+    /* OOP its a "constructor" function and "this" refer to the parameter in parent function, "this" is used to refer to class in left of the dot mark*/
+
 // 3- What is jQuery?
 
+    /* jquery is a libary of javascript functions create to facilitate work of programers */
+
 // 4- what is the diffrence between Closure's methods and The OOP's methods?
+
+/* when we talk about closure & OOP we can not talk about difference, but relationship between these two function because one its a part of the other.*/
 
 
 
